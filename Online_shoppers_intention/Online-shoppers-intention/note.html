@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title></title>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="libs/navigation-1.1/tabsets.js"></script>
+<script src="libs/navigation-1.1/codefolding.js"></script>
+<link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi" />
+<meta name="format-detection" content="telephone=no" />
+<script src="libs/exploratory/resources/d3.min.js?cb=cb1667516697318"></script>
+<script src="libs/exploratory/resources/viz.min.js?cb=cb1667516697318"></script>
+<script src="libs/exploratory/resources/chroma.min.js?cb=cb1667516697318"></script>
+<script src="libs/exploratory/resources/showdown.min.js?cb=cb1667516697318"></script>
+<script src="libs/exploratory/resources/jquery.balloon.min.js?cb=cb1667516697318"></script>
+<link href="libs/exploratory/resources/viz-base.css?cb=cb1667516697318" rel="stylesheet"></link>
+<script src="libs/exploratory/resources/plotly.min.js?cb=cb1667516697318"></script>
+<script src="libs/exploratory/resources/plotly-locale-ja.js?cb=cb1667516697318"></script>
+<link href="libs/exploratory/resources/plotly-custom.css?cb=cb1667516697318" rel="stylesheet"></link>
+<link href="libs/exploratory/resources/pivot.css?cb=cb1667516697318" rel="stylesheet"></link>
+
+<style  type="text/css">
+  /* pivot adjustment */
+  .pivot-metainfo {
+    display:none;
+  }
+  .viz-container {
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+  }
+</style>
+<script src="libs/exploratory\layout\hDv1dEI8.js"></script>
+<script src="libs/exploratory\layout\SIE7xyg4.js"></script>
+<script src="libs/exploratory\layout\eVm6Fux9.js"></script>
+<script src="libs/exploratory\layout\Kgw7OOO0.js"></script>
+<script src="libs/exploratory\layout\IuS3rFn0.js"></script>
+<script src="libs/exploratory\layout\IdF5VTh9.js"></script>
+<script src="libs/exploratory\layout\bzv1NXK5.js"></script>
+<script src="libs/exploratory\layout\Pwg7IvR2.js"></script>
+<script src="libs/exploratory\layout\LlS0dbC6.js"></script>
+<script src="libs/exploratory\layout\Aut6Ekj3.js"></script>
+<script src="libs/exploratory\layout\ClQ7hEH1.js"></script>
+<script src="libs/exploratory\layout\zXi0UUh3.js"></script>
+<script src="libs/exploratory\layout\STg0Flk7.js"></script>
+<script src="libs/exploratory\layout\wBD4Dvg3.js"></script>
+<script src="libs/exploratory\layout\qZw5pba3.js"></script>
+<script src="libs/exploratory\layout\nWB5rGr1.js"></script>
+<script src="libs/exploratory\layout\YCJ3chq0.js"></script>
+<script src="libs/exploratory\layout\EVw3EgM0.js"></script>
+<script src="libs/exploratory\layout\dXs9mNl6.js"></script>
+<script src="libs/exploratory\layout\kBR3ghR8.js"></script>
+<script src="libs/exploratory\layout\lMx6xxP2.js"></script>
+<script src="libs/exploratory\layout\YxJ8lbd4.js"></script>
+<script src="libs/exploratory\layout\hCK5udb1.js"></script>
+<script src="libs/exploratory\layout\IZl4mbh8.js"></script>
+<script src="libs/exploratory\layout\drt8IBW4.js"></script>
+<script src="libs/exploratory\layout\EGB0UAI7.js"></script>
+<script src="libs/exploratory\layout\jca6Kyx0.js"></script>
+<script src="libs/exploratory\layout\xuO3jYV9.js"></script>
+<script src="libs/exploratory\layout\EBW7YpY2.js"></script>
+<script src="libs/exploratory\analytics\oJf8jVU2.js"></script>
+<script src="libs/exploratory\layout\MkG6mYD6.js"></script>
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="libs/exploratory/resources/note-base.css?cb=20221103T230457175Z" type="text/css" />
+<link rel="stylesheet" href="libs/exploratory/resources/microtip.css?cb=20221103T230457175Z" type="text/css" />
+<link rel="stylesheet" href="libs/exploratory/resources/note-mobile.css?cb=20221103T230457175Z" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        // adding '_' for the hash. Somehow single word without special chars corrupts the layout.
+        return '_'+text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+div.toc-content {
+  padding-left: 80px;
+  padding-right: 40px;
+  max-width:820px; /* 700px (main body width) + padding left/right */ 
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+  div.toc-content {
+    padding-left: 40px;
+    padding-right: 40px;
+    max-width:770px; /* 700px (main body width) + padding left/right */ 
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+  div.toc-content {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width:none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+<style type="text/css">
+/* Styles for plain html output with 2-column layout, which is 
+   with TOC floating on the left hand side case.  */ 
+.main-container {
+}
+
+/* Adjust toc styles */
+.tocify-subheader .tocify-item {
+  padding-left: 15px;
+}
+/* h3 and lower headers */
+.tocify-subheader .tocify-subheader .tocify-item {
+  padding-left: 30px;
+}
+/* override TOC default top margin */
+#TOC {
+  margin-top: 48px;
+  padding-right:20px;
+  color: #444659;
+}
+@media (max-width: 768px) {
+  /* shorter top margin for mobile */
+  #TOC { 
+    margin-top:25px; padding-right:0px;
+  }
+}
+
+/* Div surrounding the TOC. */
+@media (min-width: 768px) {
+  .col-xs-12.col-sm-4.col-md-3 {
+    /* Avoid the content overlapping TOC on safari if you zoom out #18209 */
+    height: 10px;
+  }
+}
+
+</style>
+
+<div class="fluid-row" id="header">
+
+<div class="btn-group pull-right">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
+
+
+
+</div>
+
+
+<div id="online-shoppers-purchasing-intention-analysis" class="section level1">
+<h1><span class="header-section-number">1</span> Online shopper's purchasing intention analysis</h1>
+<div id="in-this-project-we-are-going-to-perform-univariate-and-bivariate-analysis-and-implement-clustering-k-means-and-elbow-methodthen-make-recommendation-based-on-these-prediction-and-analysis." class="section level3">
+<h3><span class="header-section-number">1.0.1</span> In this project, we are going to perform univariate and bivariate analysis, and implement clustering (k-means and elbow method)then make recommendation based on these prediction and analysis.</h3>
+<p>You can access to the orginal data <a href="https://archive.ics.uci.edu/ml/machine-learning-databases/00468/online_shoppers_intention.csv">here</a></p>
+</div>
+<div id="this-data-contains-both-numerical-and-categorical-features.-it-includes-18-columns-and-12330-entries.-there-is-no-missing-data-in-this-data-set." class="section level3">
+<h3><span class="header-section-number">1.0.2</span> This data contains both numerical and categorical features. It includes 18 columns, and 12330 entries. There is no missing data in this data set.</h3>
+</div>
+<div id="the-numerical-features" class="section level3">
+<h3><span class="header-section-number">1.0.3</span> The numerical features:</h3>
+<div class="figure">
+<img src="libs/exploratory/images/p1.png" />
+
+</div>
+</div>
+<div id="the-categorical-features" class="section level3">
+<h3><span class="header-section-number">1.0.4</span> The categorical features</h3>
+<div class="figure">
+<img src="libs/exploratory/images/p2.png" />
+
+</div>
+</div>
+</div>
+<div id="univariate-analysis" class="section level1">
+<h1><span class="header-section-number">2</span> Univariate Analysis</h1>
+<div id="we-will-start-by-checking-these-variables-using-univariate-analysis" class="section level2">
+<h2><span class="header-section-number">2.1</span> We will start by checking these variables using univariate analysis:</h2>
+<div class="figure">
+<img src="libs/exploratory/images/p3.png" />
+
+</div>
+<div id="baseline-conversion-rate-from-the-revenue-column" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> Baseline conversion rate from the revenue column</h3>
+</div>
+</div>
+<div id="baseline-revenue-conversion" class="section level2">
+<h2><span class="header-section-number">2.2</span> Baseline Revenue conversion</h2>
+<p><script data-id="viz_1" data-object-name="viz_hDv1dEI8" data-viz="hDv1dEI8" data-height="normal" data-width="normal" data-fit="" ></script><div data-id="viz_1" style="width:100%; height:400px; display:table;margin-bottom:38px" class="viz-rendering-error viz-loading"><div style="width:100%; height:100%; display:table-cell; vertical-align:middle; text-align:center; font-size:14px; color:#999; background-color:white;font-family:sans-serif "><div>Loading... </div></div></div> We can notine that the False is higher than True, now we will get the exact number for each subcategory</p>
+</div>
+<div id="value-ocunt-of-the-revenue-column" class="section level2">
+<h2><span class="header-section-number">2.3</span> Value ocunt of the Revenue column</h2>
+<p><script data-id="viz_2" data-object-name="viz_SIE7xyg4" data-viz="SIE7xyg4" data-height="normal" data-width="normal" data-fit="" ></script><div data-id="viz_2" style="width:100%; height:400px; display:table;margin-bottom:38px" class="viz-rendering-error viz-loading"><div style="width:100%; height:100%; display:table-cell; vertical-align:middle; text-align:center; font-size:14px; color:#999; background-color:white;font-family:sans-serif "><div>Loading... </div></div></div> Since the overall visitors is 12330, the conversion is 15,47%.</p>
+</div>
+<div id="visitor-wise-distribution" class="section level2">
+<h2><span class="header-section-number">2.4</span> Visitor-Wise Distribution</h2>
+</div>
+<div id="visitor-type-wise-distribution" class="section level2">
+<h2><span class="header-section-number">2.5</span> Visitor type-wise distribution</h2>
+<p><script data-id="viz_3" data-object-name="viz_eVm6Fux9" data-viz="eVm6Fux9" data-height="normal" data-width="normal" data-fit="" ></script><div data-id="viz_3" style="width:100%; height:400px; display:table;margin-bottom:38px" class="viz-rendering-error viz-loading"><div style="width:100%; height:100%; display:table-cell; vertical-align:middle; text-align:center; font-size:14px; color:#999; background-color:white;font-family:sans-serif "><div>Loading... </div></div></div> Now, we calculate the exact number of visitors for each type</p>
+</div>
+<div id="visitor-type-count" class="section level2">
+<h2><span class="header-section-number">2.6</span> Visitor type count</h2>
+<p><script data-id="viz_4" data-object-name="viz_Kgw7OOO0" data-viz="Kgw7OOO0" data-height="normal" data-width="normal" data-fit="" ></script><div data-id="viz_4" style="width:100%; height:400px; display:table;margin-bottom:38px" class="viz-rendering-error viz-loading"><div style="width:100%; height:100%; display:table-cell; vertical-align:middle; text-align:center; font-size:14px; color:#999; background-color:white;font-family:sans-serif "><div>Loading... </div></div></div> We can see that the number of returning customers is higher than the new visitors. ## Traffic-Wise Distribution</p>
+</div>
+<div id="traffic-type-wise-distribution" class="section level2">
+<h2><span class="header-section-number">2.7</span> Traffic type-wise distribution</h2>
+<p><script data-id="viz_5" data-object-name="viz_IuS3rFn0" data-viz="IuS3rFn0" data-height="normal" data-width="normal" data-fit="" ></script><div data-id="viz_5" style="width:100%; height:400px; display:table;margin-bottom:38px" class="viz-rendering-error viz-loading"><div style="width:100%; height:100%; display:table-cell; vertical-align:middle; text-align:center; font-size:14px; color:#999; background-color:white;font-family:sans-serif "><div>Loading... </div></div></div> From the previous chart we can notice that sources 2,1,3 and 4 have the majority of web traffic. ## Analyzing the Distribution of Customers Session on the Website</p>
+</div>
+<div id="weekend-seesion-distribution" class="section level2">
+<h2><span class="header-section-number">2.8</span> Weekend Seesion Distribution</h2>
+<script data-id="viz_6" data-object-name="viz_IdF5VTh9" data-viz="IdF5VTh9" data-height="normal" data-width="normal" data-fit="" ></script><div data-id="viz_6" style="width:100%; height:400px; display:table;margin-bottom:38px" class="viz-rendering-error viz-loading"><div style="width:100%; height:100%; display:table-cell; vertical-align:middle; text-align:center; font-size:14px; color:#999; background-color:white;font-family:sans-serif "><div>Loading... </div></div></div>
+</div>
+<div id="weekend-seesion-distribution-count" class="section level2">
+<h2><span class="header-section-number">2.9</span> Weekend Seesion Distribution Count</h2>
+<p><script data-id="viz_7" data-object-name="viz_bzv1NXK5" data-viz="bzv1NXK5" data-height="normal" data-width="normal" data-fit="" ></script><div data-id="viz_7" style="width:100%; height:400px; display:table;margin-bottom:38px" class="viz-rendering-error viz-loading"><div style="width:100%; height:100%; display:table-cell; vertical-align:middle; text-align:center; font-size:14px; color:#999; background-color:white;font-family:sans-serif "><div>Loading... </div></div></div> We can see there is more False in this subcategory. ## Region-Wise Distribution</p>
+</div>
+<div id="region-wose-distribution-of-customers" class="section level2">
+<h2><span class="header-section-number">2.10</span> Region-wose distribution of customers</h2>
+<p><script data-id="viz_8" data-object-name="viz_Pwg7IvR2" data-viz="Pwg7IvR2" data-height="normal" data-width="normal" data-fit="" ></script><div data-id="viz_8" style="width:100%; height:400px; display:table;margin-bottom:38px" class="viz-rendering-error viz-loading"><div style="width:100%; height:100%; display:table-cell; vertical-align:middle; text-align:center; font-size:14px; color:#999; background-color:white;font-family:sans-serif "><div>Loading... </div></div></div> Now, let's get the exact count of Region</p>
+</div>
+<div id="region-wose-distribution-of-customers-count" class="section level2">
+<h2><span class="header-section-number">2.11</span> Region-wose distribution of customers count</h2>
+<p><script data-id="viz_9" data-object-name="viz_LlS0dbC6" data-viz="LlS0dbC6" data-height="normal" data-width="normal" data-fit="" ></script><div data-id="viz_9" style="width:100%; height:400px; display:table;margin-bottom:38px" class="viz-rendering-error viz-loading"><div style="width:100%; height:100%; display:table-cell; vertical-align:middle; text-align:center; font-size:14px; color:#999; background-color:white;font-family:sans-serif "><div>Loading... </div></div></div> Regions 1and 3 account for the 50% on online sessions, so marketing campaigns can target these regions.</p>
+</div>
+<div id="analyzing-the-browser-and-os-distribution-of-customers" class="section level2">
+<h2><span class="header-section-number">2.12</span> Analyzing the Browser and OS Distribution of Customers</h2>
+</div>
+<div id="browser-wise-seesion-distribution" class="section level2">
+<h2><span class="header-section-number">2.13</span> Browser wise seesion Distribution</h2>
+<script data-id="viz_10" data-object-name="viz_Aut6Ekj3" data-viz="Aut6Ekj3" data-height="normal" data-width="normal" data-fit="" ></script><div data-id="viz_10" style="width:100%; height:400px; display:table;margin-bottom:38px" class="viz-rendering-error viz-loading"><div style="width:100%; height:100%; display:table-cell; vertical-align:middle; text-align:center; font-size:14px; color:#999; background-color:white;font-family:sans-serif "><div>Loading... </div></div></div>
+<p>Getting the value coun of browsers</p>
+</div>
+<div id="browser-wise-seesion-distribution-count" class="section level2">
+<h2><span class="header-section-number">2.14</span> Browser wise seesion Distribution Count</h2>
+<script data-id="viz_11" data-object-name="viz_ClQ7hEH1" data-viz="ClQ7hEH1" data-height="normal" data-width="normal" data-fit="" ></script><div data-id="viz_11" style="width:100%; height:400px; display:table;margin-bottom:38px" class="viz-rendering-error viz-loading"><div style="width:100%; height:100%; display:table-cell; vertical-align:middle; text-align:center; font-size:14px; color:#999; background-color:white;font-family:sans-serif "><div>Loading... </div></div></div>
+</div>
+<div id="os-wise-session-distribution" class="section level2">
+<h2><span class="header-section-number">2.15</span> Os-wise session distribution</h2>
+<script data-id="viz_12" data-object-name="viz_zXi0UUh3" data-viz="zXi0UUh3" data-height="normal" data-width="normal" data-fit="" ></script><div data-id="viz_12" style="width:100%; height:400px; display:table;margin-bottom:38px" class="viz-rendering-error viz-loading"><div style="width:100%; height:100%; display:table-cell; vertical-align:middle; text-align:center; font-size:14px; color:#999; background-color:white;font-family:sans-serif "><div>Loading... </div></div></div>
+</div>
+<div id="os-wise-session-distribution-count" class="section level2">
+<h2><span class="header-section-number">2.16</span> Os-wise session distribution Count</h2>
+<p><script data-id="viz_13" data-object-name="viz_STg0Flk7" data-viz="STg0Flk7" data-height="normal" data-width="normal" data-fit="" ></script><div data-id="viz_13" style="width:100%; height:400px; display:table;margin-bottom:38px" class="viz-rendering-error viz-loading"><div style="width:100%; height:100%; display:table-cell; vertical-align:middle; text-align:center; font-size:14px; color:#999; background-color:white;font-family:sans-serif "><div>Loading... </div></div></div> Such information is important as if we know the most used OS system we can improve their technological based system.</p>
+</div>
+<div id="administrative-page-wise-distribution" class="section level2">
+<h2><span class="header-section-number">2.17</span> Administrative page-wise distribution</h2>
+<p><script data-id="viz_14" data-object-name="viz_wBD4Dvg3" data-viz="wBD4Dvg3" data-height="normal" data-width="normal" data-fit="" ></script><div data-id="viz_14" style="width:100%; height:400px; display:table;margin-bottom:38px" class="viz-rendering-error viz-loading"><div style="width:100%; height:100%; display:table-cell; vertical-align:middle; text-align:center; font-size:14px; color:#999; background-color:white;font-family:sans-serif "><div>Loading... </div></div></div> We can spot that the 0 page is the most visited page.</p>
+</div>
+<div id="information-pageview-distribution" class="section level2">
+<h2><span class="header-section-number">2.18</span> Information pageview distribution</h2>
+<script data-id="viz_15" data-object-name="viz_qZw5pba3" data-viz="qZw5pba3" data-height="normal" data-width="normal" data-fit="" ></script><div data-id="viz_15" style="width:100%; height:400px; display:table;margin-bottom:38px" class="viz-rendering-error viz-loading"><div style="width:100%; height:100%; display:table-cell; vertical-align:middle; text-align:center; font-size:14px; color:#999; background-color:white;font-family:sans-serif "><div>Loading... </div></div></div>
+</div>
+<div id="information-pageview-distribution-count" class="section level2">
+<h2><span class="header-section-number">2.19</span> Information pageview distribution Count</h2>
+<p><script data-id="viz_16" data-object-name="viz_nWB5rGr1" data-viz="nWB5rGr1" data-height="normal" data-width="normal" data-fit="" ></script><div data-id="viz_16" style="width:100%; height:400px; display:table;margin-bottom:38px" class="viz-rendering-error viz-loading"><div style="width:100%; height:100%; display:table-cell; vertical-align:middle; text-align:center; font-size:14px; color:#999; background-color:white;font-family:sans-serif "><div>Loading... </div></div></div> Almost of 80 % of users are visiting page 0 and 1.</p>
+<p>Now what! We are going to figure the special day distribution</p>
+</div>
+<div id="special-day-session-distribution" class="section level2">
+<h2><span class="header-section-number">2.20</span> Special day session distribution</h2>
+<script data-id="viz_17" data-object-name="viz_YCJ3chq0" data-viz="YCJ3chq0" data-height="normal" data-width="normal" data-fit="" ></script><div data-id="viz_17" style="width:100%; height:400px; display:table;margin-bottom:38px" class="viz-rendering-error viz-loading"><div style="width:100%; height:100%; display:table-cell; vertical-align:middle; text-align:center; font-size:14px; color:#999; background-color:white;font-family:sans-serif "><div>Loading... </div></div></div>
+</div>
+<div id="special-day-session-distribution-count" class="section level2">
+<h2><span class="header-section-number">2.21</span> Special day session distribution Count</h2>
+<p><script data-id="viz_18" data-object-name="viz_EVw3EgM0" data-viz="EVw3EgM0" data-height="normal" data-width="normal" data-fit="" ></script><div data-id="viz_18" style="width:100%; height:400px; display:table;margin-bottom:38px" class="viz-rendering-error viz-loading"><div style="width:100%; height:100%; display:table-cell; vertical-align:middle; text-align:center; font-size:14px; color:#999; background-color:white;font-family:sans-serif "><div>Loading... </div></div></div> We can see that there is 89.8% of visitors visited during a non-special day, particularly subcategory 0. So, there is no affinity toward special days.</p>
+<hr />
+</div>
+</div>
+<div id="bivariate-analysis" class="section level1">
+<h1><span class="header-section-number">3</span> Bivariate Analysis</h1>
+<p>Now, we will perform some bivariate analysis to see the relationshipe between two variables. We are going to see the relationship between revenue column and the following categories. Visitor type, traffic type, region, browser type, operating system, month and special day.</p>
+<div id="revenue-versus-visitor-type" class="section level2">
+<h2><span class="header-section-number">3.1</span> Revenue versus visitor type</h2>
+<script data-id="viz_19" data-object-name="viz_dXs9mNl6" data-viz="dXs9mNl6" data-height="normal" data-width="normal" data-fit="" ></script><div data-id="viz_19" style="width:100%; height:400px; display:table;margin-bottom:38px" class="viz-rendering-error viz-loading"><div style="width:100%; height:100%; display:table-cell; vertical-align:middle; text-align:center; font-size:14px; color:#999; background-color:white;font-family:sans-serif "><div>Loading... </div></div></div>
+<p>From the preceding chart, more revenue is granted from returning customers more than new visitors. Perhaps we need new strategies to attract new customers.</p>
+</div>
+<div id="revenue-versus-traffic-type" class="section level2">
+<h2><span class="header-section-number">3.2</span> Revenue versus traffic type</h2>
+<p><script data-id="viz_20" data-object-name="viz_kBR3ghR8" data-viz="kBR3ghR8" data-height="normal" data-width="normal" data-fit="" ></script><div data-id="viz_20" style="width:100%; height:400px; display:table;margin-bottom:38px" class="viz-rendering-error viz-loading"><div style="width:100%; height:100%; display:table-cell; vertical-align:middle; text-align:center; font-size:14px; color:#999; background-color:white;font-family:sans-serif "><div>Loading... </div></div></div> We can see more revenue conversion occurs for web traffic from source 2, also source 13 have generated considerable web traffic.</p>
+</div>
+<div id="revenue-generated-per-region" class="section level2">
+<h2><span class="header-section-number">3.3</span> Revenue generated per region</h2>
+<p><script data-id="viz_21" data-object-name="viz_lMx6xxP2" data-viz="lMx6xxP2" data-height="normal" data-width="normal" data-fit="" ></script><div data-id="viz_21" style="width:100%; height:400px; display:table;margin-bottom:38px" class="viz-rendering-error viz-loading"><div style="width:100%; height:100%; display:table-cell; vertical-align:middle; text-align:center; font-size:14px; color:#999; background-color:white;font-family:sans-serif "><div>Loading... </div></div></div> Region 1 have gained more sales then region 3. Maybe wharehouse is good for region 1.</p>
+</div>
+<div id="revenue-versus-browser-type" class="section level2">
+<h2><span class="header-section-number">3.4</span> Revenue versus browser type</h2>
+<p><script data-id="viz_22" data-object-name="viz_YxJ8lbd4" data-viz="YxJ8lbd4" data-height="normal" data-width="normal" data-fit="" ></script><div data-id="viz_22" style="width:100%; height:400px; display:table;margin-bottom:38px" class="viz-rendering-error viz-loading"><div style="width:100%; height:100%; display:table-cell; vertical-align:middle; text-align:center; font-size:14px; color:#999; background-color:white;font-family:sans-serif "><div>Loading... </div></div></div> More transactions were done via browser 2 then 1.</p>
+</div>
+<div id="revenue-generated-by-the-os-type" class="section level2">
+<h2><span class="header-section-number">3.5</span> Revenue generated by the OS type</h2>
+<p><script data-id="viz_23" data-object-name="viz_hCK5udb1" data-viz="hCK5udb1" data-height="normal" data-width="normal" data-fit="" ></script><div data-id="viz_23" style="width:100%; height:400px; display:table;margin-bottom:38px" class="viz-rendering-error viz-loading"><div style="width:100%; height:100%; display:table-cell; vertical-align:middle; text-align:center; font-size:14px; color:#999; background-color:white;font-family:sans-serif "><div>Loading... </div></div></div> It is easily noticeable that more revenue can be collected from OS 2. Before we analyze month data, we have to reorder its level. This is the code to reorder the level of month</p>
+<pre><code>mutate(Month = fct_relevel(Month, &quot;Feb&quot;,&quot;Mar&quot;,&quot;May&quot;,&quot;June&quot;,&quot;Jul&quot;,&quot;Aug&quot;,&quot;Sep&quot;,&quot;Oct&quot;,&quot;Nov&quot;,&quot;Dec&quot;))</code></pre>
+<p>Then we plot month by its revenue</p>
+</div>
+<div id="revenue-versus-month" class="section level2">
+<h2><span class="header-section-number">3.6</span> Revenue versus month</h2>
+<script data-id="viz_24" data-object-name="viz_IZl4mbh8" data-viz="IZl4mbh8" data-height="normal" data-width="normal" data-fit="" ></script><div data-id="viz_24" style="width:100%; height:400px; display:table;margin-bottom:38px" class="viz-rendering-error viz-loading"><div style="width:100%; height:100%; display:table-cell; vertical-align:middle; text-align:center; font-size:14px; color:#999; background-color:white;font-family:sans-serif "><div>Loading... </div></div></div>
+<p>The highest month is May, NOvember them March.</p>
+</div>
+<div id="linear-relationship" class="section level2">
+<h2><span class="header-section-number">3.7</span> Linear relationship</h2>
+<p>we will investigate the relationship among these variables Bounce rate vs exit rate, page value vs bounce rate, page value vs exit rate, impact of administration page views and administrative pageview duration on revenue, and impact of information page views and information pageview duration on revenue.</p>
+</div>
+<div id="bounce-rates-versus-ecit-rate" class="section level2">
+<h2><span class="header-section-number">3.8</span> Bounce Rates versus ecit rate</h2>
+<script data-id="viz_25" data-object-name="viz_drt8IBW4" data-viz="drt8IBW4" data-height="normal" data-width="normal" data-fit="" ></script><div data-id="viz_25" style="width:100%; height:400px; display:table;margin-bottom:38px" class="viz-rendering-error viz-loading"><div style="width:100%; height:100%; display:table-cell; vertical-align:middle; text-align:center; font-size:14px; color:#999; background-color:white;font-family:sans-serif "><div>Loading... </div></div></div>
+<p>There is a positive relationship between the bounce rate and the exit rate</p>
+</div>
+<div id="page-value-versus-bounce-rate" class="section level2">
+<h2><span class="header-section-number">3.9</span> Page value versus bounce rate</h2>
+<p><script data-id="viz_26" data-object-name="viz_EGB0UAI7" data-viz="EGB0UAI7" data-height="normal" data-width="normal" data-fit="" ></script><div data-id="viz_26" style="width:100%; height:400px; display:table;margin-bottom:38px" class="viz-rendering-error viz-loading"><div style="width:100%; height:100%; display:table-cell; vertical-align:middle; text-align:center; font-size:14px; color:#999; background-color:white;font-family:sans-serif "><div>Loading... </div></div></div> However, we can spot a negative relationship among page value and bounce rate. And, to enhance purchasing, we need to improve page value perhaps one solution is to make the page more interactive.</p>
+</div>
+<div id="page-value-versus-bounce-rate-1" class="section level2">
+<h2><span class="header-section-number">3.10</span> Page value versus bounce rate</h2>
+<p><script data-id="viz_27" data-object-name="viz_jca6Kyx0" data-viz="jca6Kyx0" data-height="normal" data-width="normal" data-fit="" ></script><div data-id="viz_27" style="width:100%; height:400px; display:table;margin-bottom:38px" class="viz-rendering-error viz-loading"><div style="width:100%; height:100%; display:table-cell; vertical-align:middle; text-align:center; font-size:14px; color:#999; background-color:white;font-family:sans-serif "><div>Loading... </div></div></div> Here also we can spot a negative relationship between page alue and exit rate as pages with a better page value have a lower exit rate.</p>
+</div>
+<div id="impact-of-adminstration-page-niews-and-adminstrative-page-view-duration-on-revenue." class="section level2">
+<h2><span class="header-section-number">3.11</span> Impact of adminstration page niews and adminstrative page view duration on revenue.</h2>
+</div>
+<div id="adminstrative-page-views-versus-duration" class="section level2">
+<h2><span class="header-section-number">3.12</span> Adminstrative page views versus duration</h2>
+<script data-id="viz_28" data-object-name="viz_xuO3jYV9" data-viz="xuO3jYV9" data-height="normal" data-width="normal" data-fit="" ></script><div data-id="viz_28" style="width:100%; height:400px; display:table;margin-bottom:38px" class="viz-rendering-error viz-loading"><div style="width:100%; height:100%; display:table-cell; vertical-align:middle; text-align:center; font-size:14px; color:#999; background-color:white;font-family:sans-serif "><div>Loading... </div></div></div>
+<p>By now we can infer that administrative related page view and the administrative related pageview duratin are positively correlated.</p>
+</div>
+<div id="impact-of-information-page-view-and-information-page-view-duration-on-revenue" class="section level2">
+<h2><span class="header-section-number">3.13</span> Impact of information page view and information page view duration on revenue</h2>
+</div>
+<div id="informational-page-views-versus-duration" class="section level2">
+<h2><span class="header-section-number">3.14</span> Informational page views versus duration</h2>
+<p><script data-id="viz_29" data-object-name="viz_EBW7YpY2" data-viz="EBW7YpY2" data-height="normal" data-width="normal" data-fit="" ></script><div data-id="viz_29" style="width:100%; height:400px; display:table;margin-bottom:38px" class="viz-rendering-error viz-loading"><div style="width:100%; height:100%; display:table-cell; vertical-align:middle; text-align:center; font-size:14px; color:#999; background-color:white;font-family:sans-serif "><div>Loading... </div></div></div> To conclude, there is a positive correlation between information page view and information page view duration. In addition, some customers who have made online purchases visited fewer number of informational page view; hence, it has less impact of revenue generation.</p>
+<hr />
+</div>
+</div>
+<div id="clustering" class="section level1">
+<h1><span class="header-section-number">4</span> Clustering</h1>
+<p>Clustering is unsupervised learning that can categorize similar data points into groups, callled clusters. They have the same pattern. We will use k-means clustering which is an algorithm based on iterations similar data. Also we will use the 'elbow method' to show what is the most effective number of cluster that have the best fit of information.</p>
+<div id="performing-k-means-clustering-for-informational-duration-versus-bounce-rate" class="section level2">
+<h2><span class="header-section-number">4.1</span> Performing k-means clustering for informational duration versus bounce rate</h2>
+</div>
+<div id="the-elbow-method---elbow-curve" class="section level2">
+<h2><span class="header-section-number">4.2</span> The Elbow Method - Elbow Curve</h2>
+<p><script data-id="analytics_30" data-object-name="analytics_oJf8jVU2" data-viz="elbow" data-analysis="oJf8jVU2" data-height="normal" data-width="normal" data-fit="" ></script><div data-id="analytics_30" style="width:100%; height:400px; display:table;margin-bottom:38px" class="viz-rendering-error viz-loading"><div style="width:100%; height:100%; display:table-cell; vertical-align:middle; text-align:center; font-size:14px; color:#999; background-color:white;font-family:sans-serif "><div>Loading... </div></div></div> So we can procced by selecting the k=2 as we can notice from the preceeding elbow graph. Then, we will perform k-means clustering</p>
+</div>
+<div id="scatterplot-for-informational-duration-versus-bounce-rate" class="section level2">
+<h2><span class="header-section-number">4.3</span> Scatterplot for informational duration versus bounce rate</h2>
+<p><script data-id="viz_31" data-object-name="viz_MkG6mYD6" data-viz="MkG6mYD6" data-height="normal" data-width="normal" data-fit="" ></script><div data-id="viz_31" style="width:100%; height:400px; display:table;margin-bottom:38px" class="viz-rendering-error viz-loading"><div style="width:100%; height:100%; display:table-cell; vertical-align:middle; text-align:center; font-size:14px; color:#999; background-color:white;font-family:sans-serif "><div>Loading... </div></div></div> We can notice that the target customers spend around 800 - 900 seconds on average on the information page.</p>
+</div>
+</div>
+<div id="summary" class="section level1">
+<h1><span class="header-section-number">5</span> Summary</h1>
+<p>In this project, on this online shopping dataset, we have performed some analysis including univariate analysis, bivariate analysis and clustering using k-means algorithm and elbow method to match the optimum number of clusters then visualized them on scatter plot, which in turn have very useful insights for making informed decision. Note: this project is orginally written in python( the data analysis workshop: chapter 5), and the aim is to write the same project in R.</p>
+</div>
+
+<!-- BEGIN: Exploratory custom footer -->
+<dialog id="download-img-modal">
+  <form method="dialog">
+    <div class="download-img-modal-title" data-label="Export Chart Image">Export Chart Image</div>
+    <div class="download-img-modal-body">
+      <div class="label-row" data-label="Output Format">
+        Output Format
+      </div>
+      <div class="value-row">
+        <input type="radio" name="download-img-type" id="download-img-type-png" value="png" checked/><span class="radio-label">PNG</span>
+        <input type="radio" name="download-img-type" id="download-img-type-svg" value="svg"/><span class="radio-label">SVG</span>
+      </div>
+      <div class="label-row" data-label="Background">
+        Background
+      </div>
+      <div class="value-row">
+        <input type="checkbox" id="download-img-transparent"/>
+        <span class="cb-label" data-label="Set background transparent">Set background transparent</span>
+      </div>
+      <div class="label-row" data-label="Size">
+        Size
+      </div>
+      <div class="value-row">
+        <div class="size-box">
+          <div class="sub-label-row" data-label="Width (Pixel)">Width (Pixel)</div>
+          <div><input id="download-img-width" type="number" value="" placeholder="1200"/></div>
+        </div>
+        <div class="size-box">
+          <div class="sub-label-row" data-label="Height (Pixel)">Height (Pixel)</div>
+          <div><input id="download-img-height" type="number" value="" placeholder="Auto" /></div>
+        </div>
+        <div class="size-box-small">
+          <div class="sub-label-row" data-label="Pixel Ratio">Pixel Ratio</div>
+          <div>
+            <select id="download-img-ratio">
+              <option value="1">100%</option>
+              <option value="1.5">150%</option>
+              <option value="2" selected>200%</option>
+              <option value="2.5">250%</option>
+              <option value="3">300%</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="download-img-modal-footer">
+      <button id="download-img-ok-btn" value="default" data-label="Export">Export</button>
+      <button id="download-img-cancel-btn" value="cancel" data-label="Cancel">Cancel</button>
+    </div>
+  </form>
+</dialog>
+
+<script>
+
+var FULL_WIDTH_MARGIN_SIDE = 60;
+var $body = $(document.body);
+var screenWidth = $body.width();
+var openOnDesktop = window.location.href.indexOf("desktop=true") > -1; 
+var openInLocal = window.location.href.startsWith("file:"); 
+var enableChartDataDownload = !openInLocal && !openOnDesktop && window.parent && window.parent.document && !!window.parent.document.querySelector('input#enable-csv-download');
+var enableChartImageDownload = !openInLocal && !openOnDesktop;
+if (openOnDesktop) { // enable chart data/image download on desktop.
+ enableChartDataDownload = true;
+ enableChartImageDownload = true;
+}
+
+// Translate the chart image download dialog.
+var lang = document.documentElement.lang || null;
+if (lang) {
+  // Translate span/div with "data-label" attr.
+  var labels = document.querySelectorAll("#download-img-modal [data-label]");
+  labels.forEach(function(l) {
+    l.innerText = VizUtil.getMessage(lang, l.dataset.label);
+  });
+  // Translate input field placeholder
+  document
+    .querySelector("#download-img-modal #download-img-height")
+    .setAttribute("placeholder", VizUtil.getMessage(lang, "Auto"));
+}
+// Add event to the ok button in the chart image download dialog.
+$("#download-img-ok-btn").on("click", function(ev){
+  var id = this.dataset.id;
+  var objectName = this.dataset.objectName;
+  var vizName = this.dataset.vizName;
+  var chartTitleForDownload = this.dataset.chartTitleForDownload;
+  var format = $("#download-img-type-png").is(":checked") ? "png" : "svg";
+  var useTransparentBackground = $("#download-img-transparent").is(":checked");
+  var width = $("#download-img-width").val();
+  var height = $("#download-img-height").val();
+  var scale = $("#download-img-ratio").find(":selected").val();
+  var _downloadSnapshotCb = function(datauri, id, objectName, vizName) {
+    try {
+      var _a = document.createElement('a');
+      _a.style.display = 'none';
+      _a.style.position= 'absolute';
+      _a.href = datauri;
+      // the filename you want
+      _a.download = chartTitleForDownload + '.' + format;
+      document.body.appendChild(_a);
+      _a.click();
+    } catch(e) {
+      console.log("Downloading chart image failed: ",e.message, id, objectName, vizName);
+    }
+  }
+  if (id && objectName && vizName) {
+    _generateSnapshot(id, objectName, vizName, _downloadSnapshotCb, format, useTransparentBackground, width, height, scale);
+  }
+});
+
+
+// The default body max-width is set to 782px so if it is less than 902px 
+// (782 + 60 left margin + 60 right margin) we cancel stretching images. 
+$('img[width="full"]').each(function() {
+  var $elem = $(this);
+  if (screenWidth > 902) {
+    $elem.attr("width", "");  // remove "full"
+    var elemOffsetLeft = $elem.offset().left;
+    $elem.css({"width": (screenWidth - (FULL_WIDTH_MARGIN_SIDE*2) )+'px', "max-width": (screenWidth - (FULL_WIDTH_MARGIN_SIDE*2) )+'px', "margin-left": (-1 *(elemOffsetLeft - FULL_WIDTH_MARGIN_SIDE)) + "px" });
+  } else {
+    $elem.attr("width", "100%"); // replace "full" with "100%"
+  }
+});
+
+$('a').each(function(index, a){
+  var $link = $(this);
+  if($link.attr('href') && !$link.attr('href').startsWith('file')){// tab has a with href="file" so exclude tab
+    $link.attr('target','_blank'); // make sure link opens another tab or window.
+  }
+});
+
+var _enableLinks = function() {
+  if (!openOnDesktop) {
+    return false;
+  }
+  $('a').each(function(index, a){
+    var $link = $(this);
+    // Enable links starting with http* and mailto. Others are used for 
+    // other purpose such as map, tab, etc so don't touch those. 
+    if($link.attr('href') && /^(http:\/\/|https:\/\/|mailto:)/.test($link.attr('href'))){
+      $link.off("click");
+      $link.on("click", function (e) {
+        e.preventDefault(); // make sure to block default to avoid external content rendered inside Exploratory Desktop.
+        window.parent.postMessage(JSON.stringify({action:'OpenExternalLink', url: $link.attr('href')}),'*');
+        //MarkdownActions.openExternalLink($link.attr('href'));
+      });
+    }
+  });
+};
+
+var onMessageReceiveHandler = function(event){
+  var data = null;   
+  try {
+    data = JSON.parse(event.data);
+  } catch(e) {
+    // The event.data may be just a text like 'ready'. 
+    // We ignore those cases. 
+  }
+  if (!data) {
+    return;
+  }
+  if(data.action) {
+    switch(data.action) {
+      case "ScrollY":
+        window.scrollTo(0, data.scrollY);
+        break;
+      case "EnableLinks":
+        _enableLinks();
+        break;
+    }
+  }
+
+}
+window.addEventListener('message', onMessageReceiveHandler, false); 
+
+var ready = function(){
+  window.parent.postMessage(JSON.stringify({action:'DocumentReady'}),'*');
+}
+document.addEventListener("DOMContentLoaded", ready);
+
+</script>
+
+<script>
+
+
+// Find exploratory vizs. Check the existence of 'data-id' and 'data-viz' attributes. 
+var $vizs = $("script[data-id][data-viz]");
+// View area width. 
+var screenWidth = $(document.body).width();
+// View area height. 
+var screenHeight = $(window).height();
+
+// In case of shared note, the note is loaded in the iframe so the screen
+// height is shorter than the actual screen size so we need to adjust it.
+// Accessing the parent fails if you open it locally (including opening on desktop) 
+// because of the cross origin so just to check. 
+if (!/^file:/.test(window.location.href)) {
+  var offset = $(window.parent.document).find("iframe.markdown-content-frame").offset();
+  if (offset && offset.top) {
+    screenHeight+=offset.top;
+  }
+}
+
+
+// Capturing charts/analytics snapshot images for Word output and 
+// self-contained HTML output.  (self-contained HTML output is not used now.)
+var _generateSnapshot = function(id, objectName, vizName, cb, format, useTransparentBackground, width, height, scale) {
+  if (!cb) {
+    // Dummy callback.
+    cb = function() {};
+  }
+  var analyticsName = null;
+
+  var viz = window[objectName];
+  if (!window._datauris) 
+    window._datauris = {};
+      
+  // If it is analytics, find the viz metadata in analytics json.
+  if (/^analytics_/.test(id)) {
+    // If no corresponding metadata found, just return. 
+    if (!viz.vizs[vizName]) {
+      cb(null, id, objectName, vizName);
+      return;
+    }
+    analyticsName = viz.name;
+    viz = viz.vizs[vizName].metadata;
+  }
+
+  if (VizUtil.isPivot(viz.options.marker)) {
+      // do nothing.
+      cb(null, id, objectName, vizName);
+  } else if (VizUtil.isLeaflet(viz.options.marker)) {
+    var map = window._leaflet_map_objs[id];
+    var options = {
+      exclude: ['.leaflet-control-zoom', '.leaflet-control-attribution', '.info-box'],
+      format: 'image/png'
+    };
+    return map.export(options)
+    .then(function(res) {
+      window._datauris[id] = res ? res.data : "null";
+      cb(res ? res.data : null, id, objectName, vizName);
+      return null;
+    })
+    .catch(function(e){
+      window._datauris[id] = "null";
+      cb(null, id, objectName, vizName);
+    });
+  } else if (VizUtil.isROutput(viz.options.marker)) {
+    cb(null, id, objectName, vizName); 
+  } else if (VizUtil.isPlotly(viz.options.marker)) {
+    // plotly
+    var graphDiv = document.querySelector('div[data-id="div-'+id+'"] .js-plotly-plot');
+    var origw = graphDiv.clientWidth;
+    var origh = graphDiv.scrollHeight;
+    var _width = width || 1200; 
+    var _height = height || (graphDiv.scrollHeight > graphDiv.clientHeight ? _width * origh / origw : 800);
+    var _format = format || "png";
+    var _scale = scale || "2";
+    // Set the background color. 
+    graphDiv.layout.paper_bgcolor = useTransparentBackground ? 'rgba(255,255,255,0)' : 'rgba(255,255,255,1)';
+    graphDiv.layout.plot_bgcolor = useTransparentBackground ? 'rgba(255,255,255,0)' : 'rgba(255,255,255,1)';
+
+    return Plotly.toImage(graphDiv,  {format: _format, width: _width, height: _height, scale: _scale})
+    .then(function(res){
+      window._datauris[id] = !!res ? res : "null";
+      cb(res, id, objectName, vizName);
+      // Use the width/height/scale used in the last export.
+      // Save the width/height/scale for the next export.
+      if (window.localStorage) {
+        window.localStorage.setItem("exploratory.viz.width", width||null);
+        window.localStorage.setItem("exploratory.viz.height", height||null);
+        window.localStorage.setItem("exploratory.viz.scale", scale||null);
+      }
+    }) 
+    .catch(function(e){
+      window._datauris[id] = "null";
+      cb(null, id, objectName, vizName);
+    })
+    .finally(function(){
+      // Get back the background color white just in case. 
+      graphDiv.layout.paper_bgcolor = 'rgba(255,255,255,1)';
+      graphDiv.layout.plot_bgcolor = 'rgba(255,255,255,1)';
+    });
+  } else { // Shouldn't reach here, but just in case.
+    cb(null, id, objectName, vizName);
+  }
+};
+
+
+var _renderSingleViz = function($div, id, vizName, analyticsName, viz, minHeight) {
+  var lang = document.documentElement.lang || null;
+  var $parent = $div.parent();
+
+  // Show no data message if data is empty. 
+  // Some chart can render its own no data message so bypass for those cases. 
+  if (VizUtil.shouldRenderNoData(viz.options.data, viz.options)) {
+    // Show the query error message if available.
+    VizUtil.renderNoData($div[0], viz.options._lastQueryErrorMessage, null, null, lang);
+    // Mark it as rendered.
+    window._vizRenderingStatus[id] = true;    
+    return;
+  }
+  // Show detail handler on the server.
+  var onShowDetailCallback = null;
+  // Enable the show detail support on the following situations.
+  // - Running on the desktop.
+  // - Running on the server.
+  // We don't support the show detail on the locally exported markdown.
+  //
+  // Disable the show detail on analytics charts for now because the chart
+  // query is against the model output so it is hard to show the original data.
+  if (!analyticsName && (openOnDesktop || !openInLocal)) {
+      onShowDetailCallback = function(cdatalist) {
+        var filterCondition = VizUtil.constructFilterConditions(cdatalist, viz.options);
+        var _msg = {
+          action: 'ShowDetail',
+          condition: filterCondition,
+          dataframeName: viz.transformName,
+          marker: viz.options.marker,
+          columns: viz.options.columns,
+          vizName: viz.name,
+          preprocessor: viz.preprocessor
+        };
+        if (openOnDesktop) {
+          _msg = JSON.stringify(_msg);
+        }
+        window.parent.postMessage(_msg, '*');
+      };
+  }
+
+  if (VizUtil.isPivot(viz.options.marker)) {
+    // Render pivot table
+    PivotTableGenerator.render(viz.options, viz.options.data, $div[0],
+      null, null, lang, null, null, null, null, null, null, onShowDetailCallback);
+    // adjust height 
+    var pTitleHeight = $div.find('.pivot-title').outerHeight(true); 
+    if ($div.find('.pivot-title').hasClass("hidden")) {
+      pTitleHeight = 0;
+    }
+    var pColTitleHeight = $div.find('.pivot-col-title').outerHeight(true);
+    if ($div.find('.pivot-col-title').hasClass("hidden")) {
+      pColTitleHeight = 0;
+    }
+    var pToolbarHeight = $div.find('.pivot-toolbar').outerHeight(true);
+    if ($div.find('.pivot-toolbar').hasClass("hidden")) {
+      pToolbarHeight = 0;
+    }
+    var pHeaderHeight = $div.find('.pivot-table-frame.pivot-table-col-header-frame').outerHeight();
+    var pBodyHeight = $div.find('.pivot-table-frame.pivot-table-body-frame').outerHeight();
+    var horizScrollBarHeight = 18;
+    var pHeight = pTitleHeight + pColTitleHeight + pHeaderHeight + pToolbarHeight + pBodyHeight + horizScrollBarHeight;
+    //console.log(pTitleHeight + " " +pColTitleHeight + " " + pHeaderHeight + " " + pBodyHeight + " " + pHeight + " " + $div.height())
+    if (viz.options.marker==="singlevalue"){
+      $parent.css({'height':'120px', 'min-height':'120px'});
+    } else {
+      // Remove min-height for Table, Pivot, Summarize Table
+      $parent.css({"min-height":""});
+      // If the height is set to the div, adjust the height depending 
+      // on the table actual height and min height. 
+      // In case of "full" mode, there is no height set 
+      // in order to show all rows so just ignore it. 
+      if ($parent[0].style.height && minHeight) {
+        $parent.height(Math.min(pHeight, minHeight));
+      }
+    }
+
+  } else if (VizUtil.isLeaflet(viz.options.marker)) {
+    // Render leaflet map
+    switch (viz.options.marker) {
+      case 'map':
+      case 'maphmap':
+        $parent.parent().parent().css({"background-color":"#fff"});
+        MapGenerator.render(viz.options, viz.options.data, $div[0], 
+        null, null, null, null, null, null, null, lang, onShowDetailCallback);
+        break;
+      case 'geojson':
+        $parent.parent().parent().css({"background-color":"#fff"});
+        var geojsonObjectName = 'geojson_' + viz.options.geojson; 
+        MapGenerator.render(viz.options, viz.options.data, $div[0], window[geojsonObjectName],
+          null, null, null, null, null, null, lang, onShowDetailCallback);
+        break;
+      case 'easymap':
+        $parent.parent().parent().css({"background-color":"#fff"});
+        var geojsonObjectName = 'geojson_' + viz.options.easymapMap; 
+        MapGenerator.render(viz.options, viz.options.data, $div[0], window[geojsonObjectName],
+          null, null, null, null, null, null, lang, onShowDetailCallback);
+        break;
+      default:
+        break;
+    }
+  } else if (VizUtil.isROutput(viz.options.marker)) {
+    // Locate the image in center.
+    $parent.css({'text-align': 'center'});
+    // Render R output
+    ROutputGenerator.render(
+      viz.options, 
+      {"outputFile": [ (window._baseUrl ? window._baseUrl + "/note_content/" : "" ) + "libs/exploratory/layout_output/"+ (analyticsName ? analyticsName+"-" : "") + viz.name+".png"]}, 
+      $div[0], 
+      true,
+      null,
+      null,
+      lang
+    );
+  } else if (VizUtil.isPlotly(viz.options.marker)) {
+    // Show/Hide layout toolbar.
+    viz.options.showFacetLayoutTool = window["exploratory-hide-chart-toolbars"] ? "off" : "on";
+    // Render plotly graph
+    $parent.css({"overflow-y":"auto"});
+    PlotlyGraphGenerator.render(viz.options, viz.options.data, $div[0], true,
+      null, null, null, null, null, onShowDetailCallback, null,
+      // Pass dummy function to onPropUpdateCallback to enable toolbar.
+      function(e){ return false; }, 
+      lang);
+  }
+};
+
+var _renderVizPanel = function() {
+  var lang = document.documentElement.lang || null;
+  var $elem = $(this); // This script tag
+  var id = $elem.attr("data-id");
+  var objectName = $elem.attr("data-object-name");
+  // Hide loading placeholer
+  // It could match multiple elements if there are same charts.
+  $('.viz-loading[data-id="'+id+'"]').hide();
+  // Backward compatibility. The rmarkdown renders the old cached data if available.
+  $('.viz-rendering-error[id="loading-'+id+'"]').hide();
+  
+  var viz = window[objectName];
+  var vizName = $elem.attr("data-viz");
+  var analyticsName = null;
+  var annotation = viz.annotation;
+  // Check both viz.displayName and viz.options.displayName 
+  // for the backward compatibility.
+  var vizDisplayName = viz.displayName || viz.options.displayName;
+
+  // If it is analytics, find the viz metadata in analytics json.
+  if (/^analytics_/.test(id)) {
+    if (viz.vizs[vizName]) {
+      analyticsName = viz.name;
+      var analyticsDisplayName = viz.displayName;
+      viz = VizUtil.analyticify(viz.vizs[vizName].metadata);
+      // Check both viz.displayName and viz.options.displayName 
+      // for the backward compatibility.
+      vizDisplayName = analyticsDisplayName + " - " + (viz.displayName || viz.options.displayName);
+    } else {
+      // If no metadata found, just set viz to null. 
+      // Usually it shouldn't happen but just in case it happens. #9689
+      viz = null;
+    }
+  }
+
+  var containerWidth = $elem.parent().width();
+
+  // The default body max-width: 782px. 
+  // The default body width including margin: 902px (782 + 60(side margin) * 2), 
+  var FULL_WIDTH_MARGIN_SIDE = screenWidth > 902 ? 60 : 0;  
+  var FULL_HEIGHT_MARGIN_TOP = 10;  
+
+  var isFullHeightMode = false;
+  var isFullWidthMode = false;
+
+  // User-specified height
+  var userHeightStr = $elem.attr("data-height");
+  var userHeight = null;
+  if (userHeightStr) {
+    if (userHeightStr==="full") {
+      isFullHeightMode = true;
+      userHeight = screenHeight  - FULL_HEIGHT_MARGIN_TOP;
+    } else if (/%$/.test(userHeightStr)) {
+      userHeight = parseInt(userHeightStr.replace("%",""));
+      userHeight = isNaN(userHeight) ? null : (screenHeight * userHeight / 100) - FULL_HEIGHT_MARGIN_TOP;
+    } else {
+      userHeight = parseInt(userHeightStr.replace("px",""));
+      userHeight = isNaN(userHeight) ? null : userHeight;
+    }
+  }
+  // User-specified width
+  var userWidthStr = $elem.attr("data-width");
+  var userWidth = null;
+  if (userWidthStr) {
+    if (userWidthStr==="full") {
+      isFullWidthMode = true;
+      userWidth = screenWidth - FULL_WIDTH_MARGIN_SIDE*2;
+    } else if (/%$/.test(userWidthStr)) {
+      userWidth = parseInt(userWidthStr.replace("%",""));
+      userWidth = isNaN(userWidth) ? null : (screenWidth * userWidth / 100) - (FULL_WIDTH_MARGIN_SIDE*2);
+    } else {
+      userWidth = parseInt(userWidthStr.replace("px",""));
+      userWidth = isNaN(userWidth) ? null : userWidth;
+    }
+  }
+
+  // Set the min height. If userHeight is available, just use it. 
+  // If not, try to set a rectangle shape. Use landscape mode If the screen is 
+  // large enough. If small (mobile case), use portrait mode.
+  var minHeight = userHeight || (containerWidth<500 ? containerWidth*8/5 : containerWidth*5/8);
+
+  // Insert a viz canvas div right after the script tag.
+  // If there's already a div there (refresh case), do nothing.
+  var $div = $('div[data-id="div-'+id+'"]');
+  var $outerDiv = $div.parent();
+  if ($div.length === 0) {
+    $div = $("<div>").attr('data-id','div-'+id).css({"min-height":minHeight+"px", "margin-bottom":"38px" }).addClass("viz-container markdown-viz-container")   
+    $outerDiv = $("<div>").addClass("viz-container-outer").append($div);
+    $elem.after($outerDiv);
+  }
+  $div.show();
+
+  // If viz is not available, render no data and exit. 
+  if (!viz) {
+    $div.height(minHeight);
+    VizUtil.renderNoData($div[0], "No chart data found: "+vizName, null, null, lang);
+    // Mark it as rendered.
+    window._vizRenderingStatus[id] = true;  
+    return;
+  } 
+ 
+  // Toolbar
+  var $toolbarDiv = $outerDiv.find('.note-pane-toolbar'), $toolbarOuterDiv = null;
+  if ($toolbarDiv.length === 0) {
+    $toolbarDiv = $('<div class="note-pane-toolbar"/>');
+    $toolbarOuterDiv = $('<div class="note-pane-toolbar-outer"/>');
+    $outerDiv.prepend($toolbarOuterDiv.append($toolbarDiv));
+  }
+  var $toolbarOuterDiv = $toolbarDiv.parent();
+ 
+  // Add a border to table/pivot
+  if ( /^(table|pivot|summarytable)$/.test(viz.options.marker)) {
+    $div.css({"border-radius":"3px", "border":"1px solid #f0f0f0", "padding":"4px 0px 0px 4px"});
+  }
+  // If plotly viz, add white background color to make viz visible on TOC
+  // if the viz width="full".
+  if (! /^(table|pivot|summarytable|map|maphmap|geojson|easymap)/.test(viz.options.marker)) {
+    $div.css({"background-color": "#ffffff"});
+  }
+
+  var _generateSnapshotCb = function() {
+    window.parent.postMessage(JSON.stringify({action:'SnapshotReady', datauris: window._datauris}),'*');
+  };
+  var $trigger = $("<a>")
+    .attr({'data-id':'a-'+id, vizName, 'data-object-name':objectName})
+    .addClass("viz-snapshot-trigger")
+    .click(_generateSnapshot.bind(
+      null,
+      id,
+      objectName,
+      vizName,
+      _generateSnapshotCb,
+      null/*format*/,
+      null/*useTransparentBackground*/,
+      null/*width*/,
+      null/*height*/,
+      null/*scale*/
+    ));
+
+  $elem.after($trigger);   
+
+  var divWidth  = $div.width(); 
+  var divHeight = $div.height();
+  var width = userWidth ||  divWidth;
+  var height = userHeight || divHeight
+
+  // If no scroll specified for height, not to set hight to let the div 
+  // expand to fit the content without the vertical scrollbar. 
+
+  // allow full height setting only if 
+  // 1. the viz is either pivot or table, or 
+  // 2. plotly chart with repeating.
+  var allowFullHeight = !!viz.options.facet || /^(table|pivot|summarytable)$/.test(viz.options.marker);
+  if (isFullHeightMode && allowFullHeight) {
+    // In case of full height setting, not to specify height. 
+  } else if (!userHeight && VizUtil.isROutput(viz.options.marker)) {
+    // In case of R-based output chart and hight is not specified explicitly 
+    // by user, not to set the height to use the full chart area div width. #14492. 
+  } else {
+    $div.css({'height': height+'px'});
+  }
+
+  $div.css({'width': width+'px'});
+  $toolbarOuterDiv.css({'width': width+'px'});
+
+  // If the width is given by user, adjust the left margin to locate the viz 
+  // in the center. If it is in the full width mode, adjust the margin based 
+  // on the screen size. 
+  if (isFullWidthMode) {
+    var marginLeft = (-1 * ($div.offset().left - FULL_WIDTH_MARGIN_SIDE)) + 'px';
+    $div.css('margin-left', marginLeft);
+    $toolbarOuterDiv.css('margin-left', marginLeft);
+  } else if (userWidth && userWidth !== divWidth) {
+    var marginLeft = ((userWidth - divWidth) / 2 * -1 ) + 'px';
+    $div.css('margin-left', marginLeft);
+    $toolbarOuterDiv.css('margin-left', marginLeft);
+  }
+
+  // in case of facet, make the viz width a bit smaller for the vert scroll bar. 
+  viz.options.width = (!viz.options.facet ? width : width-20);
+  viz.options.height= height;
+
+  // Render a chart.
+  var $innerDiv = $div.find('> .inner-div');
+  if ($innerDiv.length === 0) {
+    $innerDiv = $('<div class="inner-div" style="width:100%; height:100%">');
+    $div.append($innerDiv);
+  }
+  _renderSingleViz($innerDiv, id, vizName, analyticsName, viz, minHeight);
+
+  // Chart title for the "download" HTML attribute for chart data and image download.
+  var chartTitleForDownload = vizDisplayName.replace('"', "&quot;");
+
+  // Show comment button.
+  var $commentBtn = null, commentHtml = null;
+  if (viz.options.marker !== "singlevalue" && annotation && !document.querySelector('div.show-comment-btn[data-show-comment-id="'+id+'"]')) {
+    var converter = new showdown.Converter();
+    commentHtml = converter.makeHtml(annotation);
+    $commentBtn = $('<div data-show-comment-id="'+id+'" class="show-comment-btn"></div>');
+    $toolbarDiv.append($commentBtn);
+  }
+
+  // Download image button.
+  var $downloadImgMenu = null;
+  if (enableChartImageDownload && VizUtil.isPlotly(viz.options.marker) && !document.querySelector('a[data-image-download-id="'+id+'"]')) {
+    $downloadImgMenu = $('<a data-image-download-id="'+id+'" href="">' + VizUtil.getMessage(lang, "Export Chart Image") + '</a>');
+    $downloadImgMenu.on("click", function(ev){ 
+      ev.preventDefault(); 
+      // Set the chart info to the attributes of the ok button in the download image dialog.
+      $("#download-img-ok-btn").attr({
+        "data-id": id,
+        "data-object-name": objectName,
+        "data-viz-name": vizName,
+        "data-chart-title-for-download": chartTitleForDownload
+      });
+
+      // Use the width/height/scale used in the last export.
+      // Save the width/height/scale for the next export.
+      if (window.localStorage) {
+        var defaultWidth = window.localStorage.getItem("exploratory.viz.width");
+        if (defaultWidth) {
+          $("#download-img-width").val(defaultWidth);
+        }
+        var defaultHeight = window.localStorage.getItem("exploratory.viz.height");
+        if (defaultHeight) {
+          $("#download-img-height").val(defaultHeight);
+        }
+        var defaultScale = window.localStorage.getItem("exploratory.viz.scale");
+        if (defaultScale) {
+          $("#download-img-ratio").val(defaultScale);
+        }
+      }
+
+      // Show the download image dialog.
+      document.querySelector("#download-img-modal").showModal();
+    });
+  }
+
+  // Download data button.
+  var $downloadDataMenu = null;
+  if (enableChartDataDownload && viz.options.marker !== "singlevalue" && !document.querySelector('a[data-download-id="'+id+'"]')) {
+    if (openOnDesktop) {
+      $downloadDataMenu = $('<a data-download-id="'+id+'" href="#">' + VizUtil.getMessage(lang, "Export Chart Data") + '</a>');
+      $downloadDataMenu.on("click", function(ev){
+        ev.preventDefault();
+        ev.stopPropagation();
+        window.parent.postMessage(JSON.stringify({action:'DownloadChartData', id: (analyticsName ? analyticsName + "_" : "")+viz.name, downloadFileName: chartTitleForDownload + ".csv", vizName: viz.name, analyticsName: analyticsName}),'*');
+      });
+    } else {
+      // Use download HTML attribute for specifying a filename. 
+      // It will automatically escape/replace punctuation characters.
+      $downloadDataMenu = $('<a data-download-id="'+id+'" href="data/'+ (analyticsName ? analyticsName + "_" : "")+viz.name+'.csv" download="'+ chartTitleForDownload +'.csv">' + VizUtil.getMessage(lang, "Export Chart Data") + '</a>');
+    }
+  }
+
+  // Add download menu dropdown if download is available.
+  if ($downloadImgMenu || $downloadDataMenu) {
+    var $downloadMenuDropdown = $('<div class="download-dropdown-menu"/>');
+    $downloadMenuDropdown.append('<a href="#">\xa0</a>')
+    var $downloadUl = $('<ul>'); 
+    $downloadMenuDropdown.append($downloadUl)
+    if ($downloadImgMenu) {
+      $downloadUl.append($('<li>').append($downloadImgMenu))
+    }
+    if ($downloadDataMenu) {
+      $downloadUl.append($('<li>').append($downloadDataMenu))
+    }
+    $toolbarDiv.append($downloadMenuDropdown);
+  }
+
+  // Full screen view support. 
+  if (viz.options.marker !== "singlevalue") {
+
+    // If the full screen view is open, re-render the chart in the screen too.
+    // This is for resizing handling.
+    var $existingVizDiv = $('div[data-preview-id="'+id+'"]');
+    if ($existingVizDiv.length > 0) {
+      viz.options.width = $existingVizDiv.width();
+      viz.options.height= $existingVizDiv.height();
+      _renderSingleViz($existingVizDiv, id, vizName, analyticsName, viz, null/*minHeight - we don't need this setting in the preview pane. */);
+    } 
+    // Full-screen toggle button.
+    var $fullscBtn = $('div.full-screen-toggle-btn[data-toggle-id="'+id+'"]'); 
+    if ($fullscBtn.length === 0) {
+      $fullscBtn = $('<div data-toggle-id="'+id+'" class="full-screen-toggle-btn" aria-label="' + VizUtil.getMessage(lang, "Show in fullscreen") + '" data-microtip-position="bottom-left" role="tooltip"></div>');
+      $fullscBtn.on("click", function(){
+
+        // Reload the chart metadata for the interactive support on the server. 
+        viz = window[objectName];
+        annotation = viz.annotation;
+        // If it is analytics, find the viz metadata in analytics json.
+        if (/^analytics_/.test(id)) {
+          if (viz.vizs[vizName]) {
+            analyticsName = viz.name;
+            viz = VizUtil.analyticify(viz.vizs[vizName].metadata);
+          } else {
+            // If no metadata found, just set viz to null. 
+            // Usually it shouldn't happen but just in case it happens. #9689
+            viz = null;
+          }
+        }
+
+        var toggleId = $(this).attr("data-toggle-id");
+        var $fullscDiv = $('<div class="full-screen-pane viz-container"></div>');
+        var $vizDiv = $('<div data-preview-id="'+toggleId+'" class="full-screen-pane-inner"></div>');
+        var $closeBtn = $('<div class="full-screen-close-btn"></div>');
+        $closeBtn.on("click", function(){
+          // Get back the original width and height.
+          viz.options.width = viz.options._width;
+          viz.options.height = viz.options._height;
+          // Remove the full-screen dialog.
+          $fullscDiv.remove();
+        });
+        $fullscDiv.append($vizDiv);
+        $fullscDiv.append($closeBtn);
+        $(document.body).append($fullscDiv);
+
+        // Remenber the current width/height. 
+        // We will get it back once the full-screen mode is closed.
+        viz.options._width = viz.options.width;
+        viz.options._height = viz.options.height;
+
+        viz.options.width = $vizDiv.width();
+        viz.options.height= $vizDiv.height();
+        // Render a chart.
+        _renderSingleViz($vizDiv, id, vizName, analyticsName, viz);
+        // Update the links in the chart in the full-screen view.
+        _enableLinks();
+      });
+      $toolbarDiv.append($fullscBtn);
+    }
+  }
+
+  // Init show comment balloon.
+  // We should do this once all the buttons are added to the toolbar
+  // because the balloon alignment depends on the width of the toolbar.
+  if ($commentBtn) {
+    $commentBtn.balloon({
+      contents: '<div class="title-area">'+VizUtil.getMessage(lang, "Comment")+'</div><div class="body-area">' + commentHtml + '</div>',
+      html: true,
+      position: "bottom left",
+      classname: "comment-balloon",
+      minLifetime: 0, showDuration: 0, hideDuration: 0,
+      css: {
+        transform: "translateX(" + ($toolbarDiv.width() - 10) + "px)",
+        border: "1px solid #ddd",
+        borderRadius: "2px",
+        padding: "10px 16px",
+        fontSize: "14px",
+        fontWeight: "normal",
+        backgroundColor: "#fff",
+        color: "#666",
+        boxShadow: "none",
+        minWidth: "200px",
+        zIndex: "1100",
+        whiteSpace: "pre-wrap",
+        borderRadius: "6px",
+        opacity: "1",
+        maxWidth: Math.min(400, ($div.outerWidth() - 20)) + "px",
+      },
+    });
+}
+
+  // Mark it as rendered.
+  window._vizRenderingStatus[id] = true;
+  _enableLinks();
+  window.parent.postMessage(JSON.stringify({action:'SetRenderingStatus', renderingStatus: window._vizRenderingStatus}),'*');
+}
+
+// Track the viz rendering status. 
+window._vizRenderingStatus = {};
+
+// Render charts.
+window._renderViz = function(){
+  $vizs.each(function(index) {
+    window._vizRenderingStatus[$(this).attr("data-id")] = false;
+    setTimeout(_renderVizPanel.bind(this) ,50);
+  });
+};
+
+// Show loading messages on charts. 
+window._showLoading = function(){
+  $vizs.each(function(index) {
+    var dataId = $(this).attr("data-id");
+    $('.viz-loading[data-id="'+dataId+'"]').show();
+    $('div[data-id="div-'+dataId+'"]').hide();
+  });
+};
+
+// Reload chart metadata. Used in Interactive mode.
+window._reloadMetadata = function(baseUrl){
+  // Save the base URL to the window object 
+  // for R-based chart output rendering later.
+  if (baseUrl) {
+    window._baseUrl = 
+      window.location.protocol + 
+      "//" + 
+      window.location.host + 
+      baseUrl;
+  }
+  var cb = "?cb=" + Date.now();
+  $vizs.each(function(index) {
+    var analyticsId = $(this).attr("data-analysis"),
+      vizId = $(this).attr("data-viz"),
+      url = "";
+    if (analyticsId) {
+      url = baseUrl+"/note_content/libs/exploratory/analytics/"+analyticsId+".js" + cb;
+    } else {
+      url = baseUrl+"/note_content/libs/exploratory/layout/"+vizId+".js" + cb;
+    }
+    $(document.body).append('<script src="'  + url +'" />');
+  });
+};
+
+// Render charts at loading time. 
+window._renderViz();
+
+
+</script>
+<!-- END: Exploratory custom footer -->
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+
+</body>
+</html>

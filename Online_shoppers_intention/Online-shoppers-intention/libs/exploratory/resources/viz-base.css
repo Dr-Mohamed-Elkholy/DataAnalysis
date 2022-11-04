@@ -1,0 +1,59 @@
+/* R output adjustment */
+.viz-container:not(.full-screen-pane) img.r-output {
+  /* Cancel styles on the R output chart image.*/
+  transform: none!IMPORTANT;
+  position: initial!IMPORTANT;
+  top: initial!IMPORTANT;
+  left: initial!IMPORTANT;
+}
+
+/* Comment title area, with background color */
+.comment-balloon .title-area {
+  background-color: #0000000d;
+  margin-left: -16px;
+  margin-right: -16px;
+  margin-top: -10px;
+  padding: 10px 16px;
+}
+/* Comment title area, without background color */
+.comment-balloon .header-area {
+  margin-left: -16px;
+  margin-right: -16px;
+  margin-top: -10px;
+  padding: 10px 16px 0px;
+}
+/* Markdown formatting in comment balloon*/
+.comment-balloon .body-area {
+  line-height: 1.5em;
+}
+.comment-balloon .body-area h1 {
+  font-size: 24px;
+  line-height: 1.5em;
+}
+.comment-balloon .body-area h2 {
+  font-size: 20px;
+  line-height: 1.5em;
+}
+.comment-balloon .body-area h3 {
+  font-size: 16px;
+  line-height: 1.5em;
+}
+.comment-balloon .body-area h4 {
+  font-size: 12px;
+  line-height: 1.5em;
+}
+.comment-balloon .body-area h5 {
+  font-size: 12px;
+  line-height: 1.5em;
+}
+.comment-balloon .body-area h6 {
+  font-size: 12px;
+  line-height: 1.5em;
+}
+.comment-balloon .body-area p {
+  font-size: 12px;
+}
+.comment-balloon .body-area > *:first-child {
+  margin-top: 13px;
+}
+

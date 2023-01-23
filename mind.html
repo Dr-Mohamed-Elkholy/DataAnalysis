@@ -1,0 +1,49 @@
+<html>
+<head>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    .hotspot {border-radius:6px; border:none; outline:none; background-color:#EEE; color:black; --min-hotspot-opacity:0.15; cursor:pointer; font-size:16px; text-decoration:underline; padding:0.5em 1em; position:absolute; transform:translate3d(-50%, 25%, 0);}
+    .hotspot:hover {opacity:1; background-color:#FFA;}
+    .hotspot:focus {opacity:1; outline:none; background-color:#FFA;}
+    model-viewer {background-color:black; width:100%; height:100%;}
+  </style>  
+</head>
+<body>
+  <model-viewer id="mv-diagram" src="KnowledgeBase.glb" camera-controls></model-viewer>
+  <script>
+    // this script is only needed to make hyperlinks work
+    var modelViewer = document.querySelector("#mv-diagram");
+    modelViewer.addEventListener ("load", function ()
+    {
+        var symbols = Object.getOwnPropertySymbols (modelViewer);
+        var sceneSymbol = symbols.find (function (symbol)
+        {
+            return (symbol.description === "scene");
+        });
+        var scene = modelViewer[sceneSymbol];
+        var n = 0;
+        scene.traverse (function (node)
+        {
+            if (node.name && (node.name.indexOf ("link-") == 0))
+            {
+                var nodeData = JSON.parse (atob (node.name.substring (5)));
+                var hotspot = document.createElement ("button");
+                var url = document.createElement ("a");
+                url.setAttribute ("href", nodeData.url);
+                hotspot.textContent = url.hostname;
+                hotspot.slot = "hotspot-" + n++;
+                hotspot.classList.add ("hotspot");
+                var position = node.position.clone ();
+                position.set (nodeData.x, nodeData.y, nodeData.z);
+                hotspot.dataset.normal = hotspot.dataset.position = position.x + " " + position.y + " " + position.z;
+                modelViewer.appendChild (hotspot);
+                hotspot.addEventListener ("click", function ()
+                {
+                    window.open (nodeData.url, "_blank");
+                });
+            }
+        });
+    });
+  </script>
+</body>
+</html>
